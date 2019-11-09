@@ -1,24 +1,23 @@
 {% set name = "sphinxcontrib-autodoc_doxygen" %}
 {% set version = "0.3.2" %}
-{% set sha256 = "cc13ca218db2907c9e3cb530d21b5a7ab6c17502958b931b3e1b82b506497e1a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: cc13ca218db2907c9e3cb530d21b5a7ab6c17502958b931b3e1b82b506497e1a
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - sphinx >=1.5
     - docutils >=0.11
     - jinja2 >=2.3
