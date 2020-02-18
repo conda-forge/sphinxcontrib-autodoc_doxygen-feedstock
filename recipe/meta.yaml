@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-autodoc_doxygen" %}
-{% set version = "0.3.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc13ca218db2907c9e3cb530d21b5a7ab6c17502958b931b3e1b82b506497e1a
+  sha256: 3af386ef57e10fbec59a5a9bf355778bd52ec98685fde956f9b01774339a5317
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
