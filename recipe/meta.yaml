@@ -43,7 +43,3 @@ about:
   summary: 'Doxygen / Sphinx bridge, with autodoc and autosummary'
   doc_url: https://rawgit.com/rmcgibbo/sphinxcontrib-autodoc_doxygen/gh-pages/index.html
   dev_url: https://github.com/rmcgibbo/sphinxcontrib-autodoc_doxygen
-
-extra:
-  recipe-maintainers:
-    - rmcgibbo
