@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-autodoc_doxygen" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3af386ef57e10fbec59a5a9bf355778bd52ec98685fde956f9b01774339a5317
+  sha256: c07bfefd92f01aa9a4f022c52e1887e9c10be77a86ce9bd854708083f9601a16
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - sphinx >=1.5
@@ -40,7 +40,7 @@ about:
   home: https://github.com/rmcgibbo/sphinxcontrib-autodoc_doxygen
   license: MIT
   license_file: LICENSE
-  summary: 'Doxygen / Sphinx bridge, with autodoc and autosummary'
+  summary: Doxygen / Sphinx bridge, with autodoc and autosummary
   doc_url: https://rawgit.com/rmcgibbo/sphinxcontrib-autodoc_doxygen/gh-pages/index.html
   dev_url: https://github.com/rmcgibbo/sphinxcontrib-autodoc_doxygen
 
